@@ -4,6 +4,7 @@ import CardList from "./CardList";
 import "./index";
 import { robots } from "./robots";
 import Searchbox from "./Searchbox";
+import "./index.css";
 const App = () => {
   const [value, setValue] = useState({ robots: robots, searchfield: "" });
 
@@ -21,7 +22,7 @@ const App = () => {
   });
   return (
     <div>
-      <h1>Robo friends</h1>
+      <h1 className="text-center">Robo friends</h1>
       <Searchbox searchChange={(e) => onSearchchange(e.target.value)} />
       <CardList robots={filteredrobots} />
     </div>

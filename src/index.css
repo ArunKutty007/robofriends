@@ -5,6 +5,17 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #00f260; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #0575e6,
+    #00f260
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #0575e6,
+    #00f260
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 code {
@@ -14,14 +25,24 @@ code {
 
 .card {
   border: 1px solid black;
-  padding: 10px;
+  padding: 5px;
   margin: 10px 20px;
   background-color: aqua;
   flex-basis: 33%;
   text-align: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+.card:hover {
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 .flex {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin-left: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.text-center {
+  text-align: center;
 }
